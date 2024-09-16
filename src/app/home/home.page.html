@@ -1,22 +1,28 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Pokedex</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      Pesquisar Pokémon
+    </ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Pikachu</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+
+  <ion-button fill="clear">Buscar</ion-button>
+
+</ion-card>
+
 </ion-content>
