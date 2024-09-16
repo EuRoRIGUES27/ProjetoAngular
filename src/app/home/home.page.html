@@ -7,23 +7,20 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-
-  <ion-list>
     <ion-item>
       <ion-input labelPlacement="floating" label="Nome" [{ngModel}]="nome"></ion-input>
     </ion-item>
 
-      <ion-button (click)adicionar >Adicionar</ion-button>
+      <ion-button (click)="adicionar()" >Adicionar</ion-button>
 
-  </ion-list>
   <ion-list>
-      <ion-item #ngFor="let item of items">
-          <ion-label>
-             {{ item.titulo }}
-          </ion-label>
-
-          <ion-button color="danger"> Buh</ion-button>
-          <ion-icon slot="icon-only"></ion-icon>
+      <ion-item #ngFor="let item of items; let posicao = index;">
+        <ion-label>
+          {{ item.titulo }}
+        </ion-label>
+          <ion-button color="danger" slot="end" (click)="remover(posicao)"> Buh
+            <ion-icon slot="icon-only"></ion-icon>
+          </ion-button>
       </ion-item>
-  </ion-list>
+    </ion-list>
 </ion-content>
