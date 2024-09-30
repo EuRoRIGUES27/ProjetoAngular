@@ -14,9 +14,23 @@
   </ion-header>
 
   <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
+        <ion-card>
+          <ion-card-title>Gasolina ou Álcool?</ion-card-title>
+
+          <ion-card-content>
+            
+             
+            <ion-input type="number" labelPlacement="floating" label="Preço Gasolina" [(ngModel)]="valorGaso"></ion-input>
+            <ion-input type="number" labelPlacement="floating" label="Preço Álcool" [(ngModel)]="valorAlco"></ion-input>
+
+            <ion-input labelPlacement="floating" label="Distancia percorrida em KM" [(ngModel)]="distancia"></ion-input>
+
+            <ion-button color="tertiary" (click)="calcularMelhor()">Calcular</ion-button>
+
+           
+          </ion-card-content>
+            <ion-label position="floating">Melhor</ion-label>
+            <ion-input [value]="situacao" readonly></ion-input>
+        </ion-card>
   </div>
 </ion-content>
